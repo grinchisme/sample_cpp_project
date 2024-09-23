@@ -15,13 +15,16 @@ jobs:
             build/tests
   
   tests:
+    needs: build
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: binaries
       - run: chmod +x tests && ./tests
+  
   run:
+    needs: build
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/download-artifact@v4
