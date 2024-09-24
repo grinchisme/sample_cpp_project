@@ -1,7 +1,5 @@
 .vscode
 build
-# Ignore Doxygen generated documentation
-/docs/html/
 
 # Ignore Doxygen temp files
 *.tmp
