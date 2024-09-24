@@ -1,0 +1,8 @@
+# Для текстовых файлов используем LF
+*.sh text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+
+# Для Windows-конкретных файлов можно оставить CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
