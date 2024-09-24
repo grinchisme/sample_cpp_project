@@ -22,6 +22,15 @@ jobs:
         with:
           name: binaries
       - run: chmod +x tests && ./tests
+
+  benchmark:
+    needs: build
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: binaries
+      - run: chmod +x benchmark_add && ./benchmark_add
   
   run:
     needs: build
